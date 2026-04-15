@@ -25,4 +25,4 @@ Tóm tắt ngắn gọn mục tiêu của bài lab.
 | 6 | 9 | Không tồn tại | -1 |
 
 ## 4. Kết luận
-Nêu ngắn gọn em học được gì từ bài lab, khó khăn lớn nhất là gì, và điều gì giúp em hiểu rõ hơn về entropy hoặc modulo inverse.
+Qua bài lab này, em đã nắm vững cách tính Entropy để đo lường độ hỗn loạn của thông tin và hiểu được mối quan hệ giữa nó với độ dư thừa (Redundancy) trong dữ liệu. Đồng thời, việc thực hiện thuật toán Euclid mở rộng để tìm nghịch đảo modulo đã giúp em củng cố nền tảng toán học quan trọng trong mật mã học.
