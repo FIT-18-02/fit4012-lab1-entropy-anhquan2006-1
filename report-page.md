@@ -13,9 +13,9 @@ Tóm tắt ngắn gọn mục tiêu của bài lab.
 ### 3.1 Entropy và redundancy
 | Input | Entropy | Redundancy | Nhận xét |
 |---|---:|---:|---|
-| aaaa | 0 | 8 |  |
-| abcd | 2 | 6 |  |
-| hello world | 3.18 | 4.82 |  |
+| aaaa | 0 | 8 | Toàn kí tự giống nhau-> không có thông timn dư thừa tối đa |
+| abcd | 2 | 6 | 4 ký tự phân bố đều-> entropy trung bình, còn nhiều dư thừa |
+| hello world | 3.18 | 4.82 | Ngôn ngữ tự nhiên-> có kí tự lặp(l,o), dư thừa ~64% |
 
 ### 3.2 Modulo inverse
 | a | m | Kết quả mong đợi | Kết quả chương trình |
