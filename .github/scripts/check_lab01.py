@@ -85,7 +85,6 @@ except Exception as exc:
 
 for w in warnings:
 print(f'::warning::{w}')
-
 if errors:
     for e in errors:
         print(f'::error::{e}')
