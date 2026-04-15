@@ -13,16 +13,16 @@ Tóm tắt ngắn gọn mục tiêu của bài lab.
 ### 3.1 Entropy và redundancy
 | Input | Entropy | Redundancy | Nhận xét |
 |---|---:|---:|---|
-| aaaa |  |  |  |
-| abcd |  |  |  |
-| hello world |  |  |  |
+| aaaa | 0 | 8 |  |
+| abcd | 2 | 6 |  |
+| hello world | 3.18 | 4.82 |  |
 
 ### 3.2 Modulo inverse
 | a | m | Kết quả mong đợi | Kết quả chương trình |
 |---:|---:|---|---|
-| 3 | 7 | 5 |  |
-| 10 | 17 | 12 |  |
-| 6 | 9 | Không tồn tại |  |
+| 3 | 7 | 5 | 5 |
+| 10 | 17 | 12 | 12 |
+| 6 | 9 | Không tồn tại | -1 |
 
 ## 4. Kết luận
 Nêu ngắn gọn em học được gì từ bài lab, khó khăn lớn nhất là gì, và điều gì giúp em hiểu rõ hơn về entropy hoặc modulo inverse.
