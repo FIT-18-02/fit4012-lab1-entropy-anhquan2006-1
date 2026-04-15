@@ -90,5 +90,4 @@ if errors:
     for e in errors:
         print(f'::error::{e}')
     sys.exit(1)
-
 print('::notice::FIT4012 Buổi 2 auto check passed.')
