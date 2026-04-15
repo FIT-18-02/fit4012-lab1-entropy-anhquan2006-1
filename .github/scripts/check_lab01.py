@@ -84,7 +84,7 @@ except Exception as exc:
     warnings.append(f'Khong doc duoc lich su git: {exc}')
 
 for w in warnings:
-    print(f'::warning::{w}')
+print(f'::warning::{w}')
 
 if errors:
     for e in errors:
