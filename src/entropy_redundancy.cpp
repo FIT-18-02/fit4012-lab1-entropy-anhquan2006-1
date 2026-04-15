@@ -1,47 +1,47 @@
-#include <cmath>
 #include <iostream>
-#include <map>
-#include <unordered_set>
 #include <string>
+#include <map>
+#include <cmath>
+
 using namespace std;
 
+// Tính entropy Shannon
 double calculate_entropy(const string &text) {
-    if (text.empty()) {
-        return 0.0;
-    }
+    if (text.empty()) return 0.0;
+
     map<char, int> freq;
+
     for (char c : text) {
         freq[c]++;
     }
+
     double entropy = 0.0;
-    for (const auto &pair : freq) {
-        double p = static_cast<double>(pair.second) / text.size();
+    int n = text.length();
+
+    for (auto pair : freq) {
+        double p = (double)pair.second / n;
         entropy -= p * log2(p);
     }
+
     return entropy;
 }
 
+// Tính redundancy
 double calculate_redundancy(const string &text, int alphabet_size = 256) {
-    double entropy = calculate_entropy(text);
-    return log2(alphabet_size) - entropy;
+    if (text.empty()) return 0.0;
+
+    double hmax = log2(alphabet_size);
+    double h = calculate_entropy(text);
+
+    return 1.0 - (h / hmax);
 }
 
 int main() {
-    string s1 = "aaaaaa";
-    string s2 = "abcabc";
-    string s3 = "hello123";
+    string text;
+    getline(cin, text);
 
-    cout << "String 1: " << s1 << endl;
-    cout << "Entropy: " << calculate_entropy(s1) << endl;
-    cout << "Redundancy: " << calculate_redundancy(s1) << endl << endl;
-
-    cout << "String 2: " << s2 << endl;
-    cout << "Entropy: " << calculate_entropy(s2) << endl;
-    cout << "Redundancy: " << calculate_redundancy(s2) << endl << endl;
-
-    cout << "String 3: " << s3 << endl;
-    cout << "Entropy: " << calculate_entropy(s3) << endl;
-    cout << "Redundancy: " << calculate_redundancy(s3) << endl;
+    cout << "Entropy: " << calculate_entropy(text) << endl;
+    cout << "Redundancy: " << calculate_redundancy(text) << endl;
 
     return 0;
-}          // ← thêm dấu } này
+}
