@@ -1,7 +1,7 @@
 # Report 1 Page – FIT4012 Lab 1
 
 ## 1. Mục tiêu
-Tóm tắt ngắn gọn mục tiêu của bài lab.
+Tìm hiểu cách tính entropy và redundancy của chuỗi dữ liệu, đồng thời cài đặt và kiểm tra thuật toán modulo inverse trong lập trình.
 
 ## 2. Cách làm
 - Đọc hiểu chương trình entropy mẫu.
@@ -13,16 +13,18 @@ Tóm tắt ngắn gọn mục tiêu của bài lab.
 ### 3.1 Entropy và redundancy
 | Input | Entropy | Redundancy | Nhận xét |
 |---|---:|---:|---|
-| aaaa | 0 | 8 | Toàn kí tự giống nhau-> không có thông timn dư thừa tối đa |
-| abcd | 2 | 6 | 4 ký tự phân bố đều-> entropy trung bình, còn nhiều dư thừa |
-| hello world | 3.18 | 4.82 | Ngôn ngữ tự nhiên-> có kí tự lặp(l,o), dư thừa ~64% |
+| aaaa | 0 | 1.00 | Chuỗi lặp hoàn toàn → không có thông tin mới |
+| abcd | 2.00 | 0.00 | Phân bố đều → thông tin tối đa |
+| hello world | ≈ 2.85 | ≈ 0.05 | Có lặp lại nhưng vẫn khá đa dạng |
 
 ### 3.2 Modulo inverse
 | a | m | Kết quả mong đợi | Kết quả chương trình |
 |---:|---:|---|---|
 | 3 | 7 | 5 | 5 |
 | 10 | 17 | 12 | 12 |
-| 6 | 9 | Không tồn tại | -1 |
+| 6 | 9 | Không tồn tại | Không tồn tại |
 
 ## 4. Kết luận
-Qua bài lab này, em đã nắm vững cách tính Entropy để đo lường độ hỗn loạn của thông tin và hiểu được mối quan hệ giữa nó với độ dư thừa (Redundancy) trong dữ liệu. Đồng thời, việc thực hiện thuật toán Euclid mở rộng để tìm nghịch đảo modulo đã giúp em củng cố nền tảng toán học quan trọng trong mật mã học.
+Qua bài lab, em hiểu rõ hơn về cách đo lượng thông tin bằng entropy và mức độ dư thừa của dữ liệu. Đồng thời nắm được cách tìm nghịch đảo modulo bằng thuật toán Euclid mở rộng.
+
+Khó khăn lớn nhất là hiểu công thức entropy và xử lý log2. Việc chạy nhiều test case giúp em hiểu rõ hơn bản chất của dữ liệu và điều kiện tồn tại của modulo inverse.
